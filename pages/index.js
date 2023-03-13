@@ -5,13 +5,12 @@ import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
 import Lottie from 'lottie-react'
 
-import logoAnimation from '../animations/animated-logo.json'
+import paper from '../public/paper.jpg'
+
+import logoAnimation from '../animations/Lottie.json'
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(true);
-  const [roleIndex, setRoleIndex] = useState("");
-
-  const roles = ["Graphic Design", "Motion Graphic Designer", "UI/UX Design", "Product Designer"]
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,15 +18,6 @@ export default function Home() {
       console.log('loaded');
     }, 9000);
   }, []);
-
-// useeffect function that changes roles every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRoleIndex((roleIndex + 1) % roles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [roleIndex]);
-
 
   const style = {
     height: 300,
@@ -41,7 +31,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <main className={styles.main}>
+        <div className={styles.vignette}>
+        <Image className={styles.texture} src={paper}/>
+        </div>
         {isLoaded === true ? 
           <div className={styles.animationCont}>
             <Lottie 
@@ -51,12 +45,29 @@ export default function Home() {
             />
           </div>
         : <></>}
-        <div>
-          <h1>Hi, I'm Ivan Li</h1>
-          <div>
-            I am a {roles[roleIndex]}
-          </div>
-        </div>
+        {isLoaded === false ?
+          <div className={styles.mainCont}>
+            <div className={styles.nameCont} id='name'>
+              <h1>Hi, I'm Ivan.</h1>
+            </div>
+            <div className={styles.meCont} id='photo'>
+              <img 
+                src="http://placekitten.com/200/300" 
+                alt="Ivan Li" 
+                width={300}  
+              />
+              <div className={styles.rolesCont}>
+                <h2 id='role1'>Digital Designer</h2>
+                <h2 id='role2'>Graphic Designer</h2>
+                <h2 id='role3'>Motion Graphic Designer</h2>
+                <h2 id='role4'>UI/UX Designer</h2>
+              </div>
+            </div>
+            <button className={styles.button} id='button'>
+              <a href='http://portfolio.ivanghl.com/projects/' target="_blank">View Portfolio</a>
+            </button>
+          </div>    
+        : <></>}
       </main>
     </>
   )
