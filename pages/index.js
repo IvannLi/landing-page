@@ -50,11 +50,10 @@ export default function Home() {
             <div className={styles.nameCont} id='name'>
               <h1>Hi, I'm Ivan.</h1>
             </div>
-            <div className={styles.meCont} id='photo'>
+            <div className={styles.photoCont} id='photo'>
               <img 
-                src="http://placekitten.com/200/300" 
+                src="ivan-li.png" 
                 alt="Ivan Li" 
-                width={300}  
               />
               <div className={styles.rolesCont}>
                 <h2 id='role1'>Digital Designer</h2>

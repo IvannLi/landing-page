@@ -40,7 +40,6 @@
 
 .mainCont {
   /* border: 2px solid red; */
-  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -52,21 +51,29 @@
   flex: 1;
   display: flex;
   align-items: center;
-  font-size: 1.3em;
+}
+
+.nameCont > h1 {
+  font-size: 3em;
+  font-family: 'Shrikhand';
+  font-weight: lighter;
   color: #fff0d9;
 }
 
-.meCont {
-  border: 1px solid green;
+.photoCont {
+  width: 100%;
+  /* border: 1px solid green; */
   flex: 2;
   position: relative;
   opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
-.meCont > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.photoCont > img {
+  height: 500px;
+  width: auto;
 }
 
 .rolesCont {
@@ -75,12 +82,16 @@
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  top: 1rem;
-  right: -230px;
+  top: 0;
+  right: -300px;
   z-index: 2;
 }
 
 .rolesCont > h2 {
+  font-size: 1.5em;
+  font-family: 'Shrikhand';
+  font-weight: lighter;
+  color: #fff0d9;
   opacity: 0;
   color: #fff0d9;
 } 

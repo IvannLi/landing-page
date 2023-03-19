@@ -101,28 +101,28 @@ a {
 
 #role1 {
   animation-delay: 3s;  
-  rotate: -10deg;
+  rotate: -12deg;
 }
 
 #role2 {
   animation-delay: 4s;  
-  rotate: -5deg;
+  rotate: -8deg;
 }
 
 #role3 {
   animation-delay: 4.8s;  
-  rotate: 5deg;
+  rotate: -3deg;
 }
 
 #role4 {
   animation-delay: 5.5s;  
-  rotate: 10deg;
+  rotate: 2deg;
 }
 
 @keyframes moveRoles {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-40px);
   }
   to {
     opacity: 1;
