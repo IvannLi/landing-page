@@ -52,6 +52,7 @@ export default function Home() {
             </div>
             <div className={styles.photoCont} id='photo'>
               <img 
+                id='ivan'
                 src="ivan-li.png" 
                 alt="Ivan Li" 
               />

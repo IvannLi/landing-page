@@ -130,3 +130,9 @@ a {
   }
 }
 
+#role1:hover, #role2:hover, #role3:hover, #role4:hover {
+  transform: scale(1.05);
+}
+
+#ivan { transition: 0.2s; }
+#ivan:hover { transform: scale(1.02); }
